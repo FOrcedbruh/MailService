@@ -1,0 +1,5 @@
+aiokafka
+pydantic
+pydantic_settings
+aiosmtplib
+fastapi[all]
