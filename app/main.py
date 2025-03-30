@@ -2,7 +2,6 @@ from fastapi import FastAPI
 import uvicorn
 from core.settings import get_settings
 from utils import lifespan
-from services.mail.MailSender import MailService
 
 settings = get_settings()
 

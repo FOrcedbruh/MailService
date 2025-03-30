@@ -26,9 +26,9 @@ class KafkaClient(BaseBrokerClient):
             async with MailService() as client:
                 try:
                     await client.send_plaintext(
-                        subject="New message", 
+                        subject=value.get("subject"), 
                         message_text=value.get("message"), 
-                        to_email=value.get("mail_to")
+                        to_email=value.get("to_mail")
                     )
                 except Exception as e:
                     logger.error(f"Error: {e}")
